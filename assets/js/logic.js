@@ -1,3 +1,21 @@
+const toggleSwitch = document.querySelector('#toggle');
+const container = document.querySelector('.container');
+
+let mode = 'light';
+
+toggleSwitch.addEventListener('click', function () {
+  if (mode === 'light') {
+    mode = 'dark';
+    container.setAttribute('class', 'dark');
+    toggleSwitch.textContent = '☀️';
+  }
+  else {
+    mode = 'light';
+    container.setAttribute('class', 'light');
+    toggleSwitch.textContent = '🌙';
+  }
+});
+
 // TODO: Create logic to toggle the light/dark mode styles for the page and circle. The mode should be saved to local storage.
 
 
